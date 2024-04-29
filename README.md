@@ -1,2 +1,114 @@
 # c-Basit-Banka-Otomasyonu
 c++ Basit Banka Otomasyonu
+
+
+#include<iostream>
+#include <stdio.h>
+#include<conio.h>
+
+using namespace std;
+
+int main() {
+
+	int sifre, tutar, bakiye=1000;
+	char button;
+	
+	cout<<"\n\n\n\t\t\t BP BANKASINA HOSGELDINIZ\n";
+	cout<<"\t\t\t--------------------------";
+
+    system("color B1");
+	cout<<"\n\t\t\tLutfen sifrenizi giriniz:";
+	cin>>sifre;
+	system("cls");
+
+	if(sifre == 1234) {
+
+        cout<<"\n\n\n\t\t\t BP BANKASINA HOSGELDINIZ\n";
+        cout<<"\t\t\t--------------------------\n";
+        system("color B1");
+		cout<<"\t\t\tSifre dogru\n\n";
+
+        cout<<"\t\t\tHangi islemi yapmak istiyorsunz...:\n\n";
+
+        cout<<"\t\t\t1- bakiye ogrenme\n";
+        cout<<"\t\t\t2- Para cekme\n";
+        cout<<"\t\t\t3- Cikis\n";
+
+        printf("\n\t\t\tLutfen bir islem seciniz:");
+
+	}
+	else {
+
+    system("cls");
+    system(" color 80");
+
+        cout<<"\n\n\n\t\t\t BP BANKASINA HOSGELDINIZ\n";
+        cout<<"\t\t\t--------------------------\n";
+   cout<<"\t\t\t HATALI SIFRE!!!!\n";
+    cout<<"\t\t\tYine Bekleriz\n\n\n\n\n\n\n";
+    return 0;
+	}
+
+
+    button=getch();
+	switch (button)
+	{
+	case '1': {
+
+	    system("cls");
+		system("color B1");
+        cout<<"\n\n\n\t\t\t BP BANKASINA HOSGELDINIZ\n";
+        cout<<"\t\t\t--------------------------\n";
+		cout<<"\t\t\t Bakiyenizde 1000 TL vardir\n\n\n\n\n\n\n\n\n\n";
+		break;
+	}
+
+		case '2': {
+
+	    system("cls");
+		system("color B1");
+        cout<<"\n\n\n\t\t\t BP BANKASINA HOSGELDINIZ\n";
+        cout<<"\t\t\t--------------------------\n";
+		cout<<"\t\t\t Lutfen cekmek istediginiz tutari giriniz: \t";
+		cin>>tutar;
+
+		if(tutar<bakiye)
+		{
+        bakiye -= tutar;
+        cout<<"\t\t\t Cekmek Istediginiz tutar ici bakiyeniz YETERLIDIR\n";
+        cout<<"\t\t\t KALAN BAKIYE:  TL\t"<<bakiye;
+
+		}else
+		{
+        system("cls");
+		system("color 80");
+        cout<<"\n\n\n\t\t\t BP BANKASINA HOSGELDINIZ\n";
+        cout<<"\t\t\t--------------------------\n";
+		cout<<"\t\t\t Lutfen cekmek istediginiz tutari giriniz: \t\t"<<tutar;
+		cout<<"\n\t\t\t YETERSIZ BAKIYE\n\n\n\n\n\n\n";
+		}
+		break;
+	}
+	
+	
+
+    	case '3': {
+
+	    system("cls");
+		system("color 80 ");
+        cout<<"\n\n\n\t\t\t BP BANKASINA HOSGELDINIZ\n";
+        cout<<"\t\t\t--------------------------\n";
+		cout<<"\t\t\t BASARILI BIR SEKILDE CIKIS YAPTINIZ \n";
+		cout<<"\t\t\t\t Yine Bekleriz\n\n\n\n\n\n\n\n\n";
+		break;
+	}
+        default:
+            system("cls");
+            system("color 80 ");
+        cout<<"\n\n\n\t\t\t BP BANKASINA HOSGELDINIZ\n";
+        cout<<"\t\t\t--------------------------\n";
+        cout<<"\t\t HATALI SECIM !!! Lutfen 1-2 ya da 3 seciniz\n\n\n\n\n\n";
+
+	}
+}
+
